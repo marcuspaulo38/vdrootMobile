@@ -1,0 +1,42 @@
+<ion-side-menus enable-menu-with-back-views="false">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-stable">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+                </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-side-menu-content>
+
+    <ion-side-menu side="left">
+        <ion-header-bar class="bar-stable">
+            <h1 class="title">Opções</h1>
+        </ion-header-bar>
+        <ion-content>
+            <ion-list>
+                <ion-item nav-clear menu-close href="#/app/home">
+                   <img src='img/home.png' width='40' height='40' /> Inicio
+                </ion-item>
+                <!--ion-item nav-clear menu-close href="#/app/cors-disabled">
+                    Sem Banco
+                </ion-item-->
+                <ion-item nav-clear menu-close href="#">
+                    <img src='img/favoritos.jpg' width='40' height='40' /> Favorito
+			    </ion-item>
+                <ion-item nav-clear menu-close href="#">
+                     <img src='img/menu.png' width='40' height='40' /> Menu
+			    </ion-item>
+                <ion-item nav-clear menu-close href="#">
+                    <img src='img/acoes.jpg' width='40' height='40' /> Ações
+			    </ion-item>
+                <ion-item nav-clear menu-close href="#/app/cors-enabled">
+                     <img src='img/tanque_menu.png' width='40' height='40' /> Tanques
+			    </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

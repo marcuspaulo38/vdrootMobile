@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    
+    <script>
+$(function() {
+	   setTime();
+	   function setTime() {
+	      setTimeout(setTime, 1000);
+	      var data = new Date();
+
+    	   // Guarda cada pedaço em uma variável
+    	   var dia     = data.getDate();           // 1-31
+    	   var dia_sem = data.getDay();            // 0-6 (zero=domingo)
+    	   var mes     = data.getMonth();          // 0-11 (zero=janeiro)
+    	   var ano2    = data.getYear();           // 2 dígitos
+    	   var ano4    = data.getFullYear();       // 4 dígitos
+    	   var hora    = data.getHours();          // 0-23
+    	   var min     = data.getMinutes();        // 0-59
+    	   var seg     = data.getSeconds();        // 0-59
+    	   var mseg    = data.getMilliseconds();   // 0-999
+    	   var tz      = data.getTimezoneOffset(); // em minutos
+    
+    	   // Formata a data e a hora (note o mês + 1)
+    	   var str_data = dia + '/' + (mes+1) + '/' + ano4;
+    	   var str_hora = hora + ':' + min + ':' + seg;
+    
+    	   // Mostra o resultado
+    	   //alert('Hoje é ' + str_data + ' às ' + str_hora);
+    	   $('#setTime').html('Fortaleza - Ce ' + str_data +  ' ' + str_hora);
+           
+
+
+	      
+	   }
+	 });
+
+</script>
+           
+    
+  </head>
+
+  <body ng-app="starter">
+    <ion-nav-view></ion-nav-view>
+  </body>
+  <div class = "bar bar-footer bar-dark">
+
+   <button class = "button icon ion-android-contact">&nbsp;by Marcus Paulo</button>&nbsp;
+   <button class = "button ion-ios-telephone-outline">&nbsp;(085) 9866918-53</button>
+</div>
+</html>

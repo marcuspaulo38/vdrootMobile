@@ -1,0 +1,61 @@
+<ion-header-bar class="bar-stable">
+    <p class="energized">
+       <h1 class="title"></h1>
+    </p>
+ </ion-header-bar>
+
+
+<ion-view view-title="VDROOT MOBILE VER 1.0">
+    <ion-content class="padding">
+          <!--img src="img/acparapostos.png"  style="width:270px;height:70px;margin:auto;display:block" -->
+       <ion-item>
+       <button class="button button-positive" ng-click="loadCountries()" alt="Clique para iniciar" title="Clique para iniciar">
+           Descrição Geral
+        </button>
+        <button class="button button-positive" ng-click="loadCountries()" alt="Clique para iniciar" title="Clique para iniciar">
+           Tanques
+        </button>
+        <ion-card ng-repeat="country in countries track by $index" ><br>
+            
+            <ion-item>
+              <p align="justify">
+                <img src='img/altura.png' width='30' height='25' alt='Altura'  title='Altura' /> {{(country).substring(126, 132)}} mm &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Nív. Água {{(country).substring(132, 135)}} mm<br> 
+                <img src='img/bomba.png' width='40' height='47' alt='Volume'  title='Volume' /> {{(country).substring(116, 122)}} Lt <img src='img/tanques/img1.png' width='100' height='100' title='Visualizar Detalhe T1' alt='Visualizar Detalhe T1'/></a>
+                <img src='img/tanques/temp.jpg' width='35' height='25' alt='Temperatura'  title='Temperatura' /> {{(country).substring(136, 140)}} °C
+              </p>  
+          </ion-item>
+          
+          <ion-item>
+              <p align="justify">
+                <img src='img/altura.png' width='30' height='25' alt='Altura'  title='Altura' /> {{(country).substring(165, 171)}} mm &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Nív. Água {{(country).substring(171, 174)}} mm<br> 
+                <img src='img/bomba.png' width='40' height='47' alt='Volume'  title='Volume' /> {{(country).substring(155,161)}} Lt <img src='img/tanques/img2.png' width='100' height='100' title='Visualizar Detalhe T2' alt='Visualizar Detalhe T2'/></a>
+                <img src='img/tanques/temp.jpg' width='35' height='25' alt='Temperatura'  title='Temperatura' /> {{(country).substring(175, 179)}} °C
+              </p>  
+          </ion-item>
+          
+          <ion-item>
+              <p align="justify">
+                <img src='img/altura.png' width='30' height='25' alt='Altura'  title='Altura' /> {{(country).substring(208, 214)}} mm &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Nív. Água {{(country).substring(171, 174)}} mm<br> 
+                <img src='img/bomba.png' width='40' height='47' alt='Volume'  title='Volume' /> {{(country).substring(198, 204)}} Lt <img src='img/tanques/img3.png' width='100' height='100' title='Visualizar Detalhe T3' alt='Visualizar Detalhe T3'/></a>
+                <img src='img/tanques/temp.jpg' width='35' height='25' alt='Temperatura'  title='Temperatura' /> {{(country).substring(218, 222)}} °C
+              </p>  
+          </ion-item>
+            
+          <ion-item>
+              <p align="justify">
+                <img src='img/altura.png' width='30' height='25' alt='Altura'  title='Altura' /> {{(country).substring(243, 249)}} mm &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Nív. Água {{(country).substring(249, 252)}} mm<br> 
+                <img src='img/bomba.png' width='40' height='47' alt='Volume'  title='Volume' /> {{(country).substring(233, 239)}} Lt <img src='img/tanques/img4.png' width='100' height='100' title='Visualizar Detalhe T4' alt='Visualizar Detalhe T4'/></a>
+                <img src='img/tanques/temp.jpg' width='35' height='25' alt='Temperatura'  title='Temperatura' /> {{(country).substring(253, 257)}} °C
+              </p>  
+          </ion-item>
+        </ion-card>
+        <br><br><br>
+            
+     </ion-content>
+     
+     <br><br><br><br>
+    <br><br>
+  </ion-view>
+
+
+
